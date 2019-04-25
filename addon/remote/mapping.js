@@ -5,7 +5,7 @@ import Util from '../util';
 export var QueryParamsForBackend = Ember.Object.extend({
   defaultKeyFor: function(key) {
     if (key === 'perPage') {
-      return 'per_page';
+      return 'per-page';
     }
     return null;
   },
@@ -108,7 +108,7 @@ export var ChangeMeta = Ember.Object.extend({
   },
 
   validate: function(meta) {
-    if (Util.isBlank(meta.total_pages)) {
+    if (Util.isBlank(meta['total-pages'])) {
       Validate.internalError("no total_pages in meta response",meta);
     }
   }

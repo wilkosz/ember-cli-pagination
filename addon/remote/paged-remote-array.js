@@ -119,7 +119,7 @@ export default Ember.ArrayProxy.extend(PageMixin, Ember.Evented, ArrayProxyPromi
     return res;
   },
 
-  totalPages: Ember.computed.alias("meta.total_pages"),
+  totalPages: Ember.computed.alias("meta.total-pages"),
 
   lastPage: null,
 
